@@ -1,5 +1,5 @@
 $ie = New-Object -ComObject 'internetExplorer.Application' -ErrorAction Ignore -ErrorVariable global:Fehler
-$ie.Visible = $true
+$ie.Visible = $false
 $ie.Navigate("https://www.ebay.de/sch/i.html?_from=R40&_nkw=3060&_sacat=0&_sop=15&LH_BIN=1&rt=nc&Speichergr%25C3%25B6%25C3%259Fe=12%2520GB&_dcat=27386") #Product Link sort by price low to high 
 While($ie.Busy -eq $true){Start-Sleep -s 3}
 $loc = 0
